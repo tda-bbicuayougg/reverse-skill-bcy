@@ -11,6 +11,7 @@
 | [api-security](api-security/SKILL.md) | Use for authorized security assessment of REST, GraphQL, WebSocket, or SOAP APIs, including discovery, authentication, authorization, rate-limit, and CI/CD t... |
 | [apk-reverse](apk-reverse/SKILL.md) | 在 CLI 环境下做 Android APK 逆向时使用。适用于 APK 解包、Java 反编译、smali 修改、重打包、Frida 动态 Hook，以及按需切换到 so/native 分析。优先使用本机已安装的 jadx、apktool、frida、adb、ida-reverse、radare2。 |
 | [attack-chain](attack-chain/SKILL.md) | Use for authorized multi-stage attack-path planning and orchestration when a task spans reconnaissance, initial access, privilege escalation, lateral movemen... |
+| [attack-surface-graph](attack-surface-graph/SKILL.md) | Builds, visualizes, and queries directed attack surface graphs connecting assets, endpoints, identities, cloud resources, and trust boundaries across multipl... |
 | [binary-diff](binary-diff/SKILL.md) | 跨版本符号迁移与二进制差分。当你有旧版本的符号/逆向结果，需要快速迁移到新版本时使用。 |
 | [browser-automation](browser-automation/SKILL.md) | 统一自动化入口。覆盖浏览器自动化（Playwright）和 Windows 桌面应用自动化（OpenReverse）。 |
 | [browser-extension-reverse](browser-extension-reverse/SKILL.md) | Use for authorized reverse engineering of browser extensions (Chrome/Firefox) including manifest analysis, background workers, and extension-based credential... |
@@ -30,6 +31,7 @@
 | [ghidra-reverse](ghidra-reverse/SKILL.md) | Use for free/open reverse engineering with Ghidra (headless or GUI), including decompile, cross-refs, and optional Ghidra MCP workflows when IDA is unavailable. |
 | [go-rust-reverse](go-rust-reverse/SKILL.md) | Use for reverse engineering stripped Go and Rust binaries including runtime recognition, pclntab/moduel data recovery, panic strings, and idiomatic decompila... |
 | [hardware-security](hardware-security/SKILL.md) | Use for authorized hardware and embedded interface security research including UART/JTAG discovery, debug pad triage, secure boot overview, and offline firmw... |
+| [hypothesis-validator](hypothesis-validator/SKILL.md) | Evaluates and validates vulnerability hypotheses against empirical test conditions and disproof criteria to eliminate false positives before confirming secur... |
 | [ida-reverse](ida-reverse/SKILL.md) | IDA Pro 逆向分析辅助技能。当用户提到逆向、反编译、分析二进制/PE/ELF/APK/DLL/SO、破解、找密码、漏洞分析、病毒分析、firmware 固件分析，或需要分析 exe/dll/so/elf/macho/sys 等文件时，务必使用此技能。 |
 | [identity-federation](identity-federation/SKILL.md) | Use for authorized assessment of federated identity systems including SAML, OIDC, OAuth2 flows, SSO misconfiguration, and token confusion issues. |
 | [js-reverse](js-reverse/SKILL.md) | 在使用 js-reverse-mcp 做前端 JavaScript 逆向时使用，适用于签名链路定位、页面观察取证、运行时采样、本地补环境复现与证据化输出。优先适配当前环境里的 js-reverse_* 工具，需要更强的浏览器/CDP/Hook 面时联动 jshookmcp。 |
@@ -48,6 +50,7 @@
 | [radio-sdr](radio-sdr/SKILL.md) | Use for authorized RF/SDR security research including signal identification, replay feasibility study in shielded labs, and wireless protocol analysis outsid... |
 | [dsl-vm-reverse](reverse-engineering/dsl-vm-reverse/SKILL.md) | Reverse JavaScript-based custom DSL/VM interpreters, non-standard WASM-like runtimes, and risk-control engines. Use when analyzing IIFE or switch-based opcod... |
 | [reverse-engineering](reverse-engineering/SKILL.md) | Provides reverse engineering techniques. Use when the main job is to understand how a compiled, obfuscated, packed, or virtualized target works before exploi... |
+| [security-assessment](security-assessment/SKILL.md) | Master control skill for structured security assessments. Coordinates Scope Control, Asset Discovery, Attack Surface Graphing, Hypothesis Validation, Finding... |
 | [supply-chain-security](supply-chain-security/SKILL.md) | Use for software supply-chain security assessment covering SBOM, SCA, CI/CD pipelines, container images, build integrity, dependency provenance, and vulnerab... |
 | [target-fingerprint](target-fingerprint/SKILL.md) | Fingerprints binary, archive, source, and runtime artifacts to extract platform, architecture, runtime, framework, obfuscation indicators, and confidence sco... |
 | [thick-client](thick-client/SKILL.md) | Use for authorized security testing of desktop thick clients including local storage, update channels, IPC, traffic, and client-side trust boundaries. |
@@ -62,6 +65,7 @@ skills/analysis-planner/SKILL.md/
 skills/api-security/SKILL.md/
 skills/apk-reverse/SKILL.md/
 skills/attack-chain/SKILL.md/
+skills/attack-surface-graph/SKILL.md/
 skills/binary-diff/SKILL.md/
 skills/browser-automation/SKILL.md/
 skills/browser-extension-reverse/SKILL.md/
@@ -81,6 +85,7 @@ skills/firmware-pentest/SKILL.md/
 skills/ghidra-reverse/SKILL.md/
 skills/go-rust-reverse/SKILL.md/
 skills/hardware-security/SKILL.md/
+skills/hypothesis-validator/SKILL.md/
 skills/ida-reverse/SKILL.md/
 skills/identity-federation/SKILL.md/
 skills/js-reverse/SKILL.md/
@@ -99,6 +104,7 @@ skills/radare2/SKILL.md/
 skills/radio-sdr/SKILL.md/
 skills/reverse-engineering/dsl-vm-reverse/SKILL.md/
 skills/reverse-engineering/SKILL.md/
+skills/security-assessment/SKILL.md/
 skills/supply-chain-security/SKILL.md/
 skills/target-fingerprint/SKILL.md/
 skills/thick-client/SKILL.md/
