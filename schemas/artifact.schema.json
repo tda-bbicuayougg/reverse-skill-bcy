@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ArtifactSchema",
+  "type": "object",
+  "required": ["path", "sha256", "size", "format"],
+  "properties": {
+    "path": { "type": "string" },
+    "sha256": { "type": "string", "pattern": "^[a-fA-F0-9]{64}$" },
+    "size": { "type": "integer", "minimum": 0 },
+    "format": { "type": "string" },
+    "entropy": { "type": "number", "minimum": 0.0, "maximum": 8.0 },
+    "nested_artifacts": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "timestamp": { "type": "string" }
+  }
+}

@@ -295,6 +295,41 @@
         { "must": "case.?review|case.?audit|evidence.?chain|evidence.?graph|traceability|fixity.?check|证据.?链|证据.?图|可追溯性|案件.?审查|案例.?审计" }
       ]
     },
+    "R41": {
+      "label": "Target fingerprinting",
+      "skill": "target-fingerprint/SKILL.md",
+      "keywords": [
+        { "must": "fingerprint|artifact.?fingerprint|target.?fingerprint|指纹.?识别" }
+      ]
+    },
+    "R42": {
+      "label": "Analysis planner",
+      "skill": "analysis-planner/SKILL.md",
+      "keywords": [
+        { "must": "analysis.?planner|dag.?plan|workflow.?planner|分析.?计划" }
+      ]
+    },
+    "R43": {
+      "label": "JVM / JAR reverse",
+      "skill": "jvm-reverse/SKILL.md",
+      "keywords": [
+        { "must": "jvm.?reverse|jar.?reverse|bytecode.?analysis|bytecode.?intelligence|classloader.?reverse" }
+      ]
+    },
+    "R44": {
+      "label": "Deobfuscation engine",
+      "skill": "deobfuscation/SKILL.md",
+      "keywords": [
+        { "must": "deobfuscation.?engine|deobfuscation.?pass|safety.?deobfuscation|去混淆.?引擎" }
+      ]
+    },
+    "R45": {
+      "label": "Cross validation & consensus",
+      "skill": "cross-validation/SKILL.md",
+      "keywords": [
+        { "must": "cross.?validation|decompiler.?consensus|evidence.?consensus|交叉.?验证" }
+      ]
+    },
     "R0": {
       "label": "General reverse-engineering",
       "skill": "reverse-engineering/SKILL.md",
@@ -307,7 +342,7 @@
   },
   "priority": [
     "R4", "R1", "R2", "R3", "R30", "R31", "R33", "R5", "R9", "R21",
-    "R22", "R6", "R7", "R8", "R34", "R28", "R17", "R16", "R18", "R24",
+    "R22", "R41", "R42", "R43", "R44", "R45", "R6", "R7", "R8", "R34", "R28", "R17", "R16", "R18", "R24",
     "R37", "R23", "R35", "R25", "R36", "R29", "R38", "R32", "R26", "R27",
     "R10", "R11", "R12", "R13", "R14", "R15", "R19", "R40", "R20", "R39", "R0"
   ]

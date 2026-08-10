@@ -820,6 +820,31 @@
                       "hint":  "case review evidence chain traceability",
                       "expect":  "R40",
                       "quick":  true
+                  },
+                  {
+                      "hint":  "artifact fingerprint 指纹识别",
+                      "expect":  "R41",
+                      "quick":  true
+                  },
+                  {
+                      "hint":  "analysis planner dag plan 分析计划",
+                      "expect":  "R42",
+                      "quick":  true
+                  },
+                  {
+                      "hint":  "jvm reverse jar reverse bytecode intelligence",
+                      "expect":  "R43",
+                      "quick":  true
+                  },
+                  {
+                      "hint":  "deobfuscation engine safety deobfuscation 去混淆引擎",
+                      "expect":  "R44",
+                      "quick":  true
+                  },
+                  {
+                      "hint":  "cross validation decompiler consensus 交叉验证",
+                      "expect":  "R45",
+                      "quick":  true
                   }
               ]
 }

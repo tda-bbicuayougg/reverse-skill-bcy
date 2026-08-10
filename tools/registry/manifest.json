@@ -1,0 +1,40 @@
+{
+  "version": "1.0.0",
+  "tools": [
+    {
+      "name": "jadx",
+      "capabilities": ["apk-decompilation", "java-decompilation"],
+      "platforms": ["windows", "linux", "macos"],
+      "inputs": ["apk", "dex", "jar", "class"],
+      "cost": "low"
+    },
+    {
+      "name": "idapro",
+      "capabilities": ["native-disassembly", "native-decompilation"],
+      "platforms": ["windows", "linux", "macos"],
+      "inputs": ["exe", "dll", "so", "elf", "macho"],
+      "cost": "high"
+    },
+    {
+      "name": "ghidra",
+      "capabilities": ["native-disassembly", "native-decompilation"],
+      "platforms": ["windows", "linux", "macos"],
+      "inputs": ["exe", "dll", "so", "elf", "macho"],
+      "cost": "medium"
+    },
+    {
+      "name": "cfr",
+      "capabilities": ["jvm-decompilation"],
+      "platforms": ["windows", "linux", "macos"],
+      "inputs": ["jar", "class"],
+      "cost": "low"
+    },
+    {
+      "name": "radare2",
+      "capabilities": ["cli-disassembly", "hex-editing"],
+      "platforms": ["windows", "linux", "macos"],
+      "inputs": ["exe", "dll", "so", "elf"],
+      "cost": "low"
+    }
+  ]
+}

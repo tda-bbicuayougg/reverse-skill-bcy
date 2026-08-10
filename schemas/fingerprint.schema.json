@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FingerprintSchema",
+  "type": "object",
+  "required": ["artifact", "platform", "runtime", "confidence"],
+  "properties": {
+    "artifact": { "$ref": "artifact.schema.json" },
+    "platform": { "type": "string" },
+    "architecture": { "type": ["string", "null"] },
+    "runtime": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string" },
+        "version": { "type": ["string", "null"] }
+      }
+    },
+    "languages": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "frameworks": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "versions": {
+      "type": "object",
+      "properties": {
+        "application": { "type": ["string", "null"] },
+        "framework": { "type": ["string", "null"] },
+        "mapping": { "type": ["string", "null"] }
+      }
+    },
+    "obfuscation": {
+      "type": "object",
+      "required": ["detected", "families"],
+      "properties": {
+        "detected": { "type": "boolean" },
+        "families": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "confidence": { "type": "number", "minimum": 0.0, "maximum": 1.0 }
+  }
+}
