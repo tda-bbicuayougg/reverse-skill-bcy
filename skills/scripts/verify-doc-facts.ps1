@@ -34,19 +34,25 @@ Write-Host "source-of-truth: $($capNames.Count) capabilities, Burp getToolList =
 
 # --- Doc helpers ---
 function Get-ListLine([string]$Text, [string]$Marker) {
+  $colon = [char]0xFF1A
   $lines = $Text -split "`r?`n"
   for ($i = 0; $i -lt $lines.Count; $i++) {
     if ($lines[$i] -match [regex]::Escape($Marker)) {
-      $inline = [regex]::Match($lines[$i], '）：(.+?)\s*$')
-      if ($inline.Success) { return $inline.Groups[1].Value }
-      if ($i + 1 -lt $lines.Count) { return $lines[$i + 1] }
+      $inline = [regex]::Match($lines[$i], "[:$colon]\s*(.+)$")
+      if ($inline.Success -and $inline.Groups[1].Value.Trim() -ne '') {
+        return $inline.Groups[1].Value.Trim()
+      }
+      if ($i + 1 -lt $lines.Count) {
+        return $lines[$i + 1].Trim()
+      }
     }
   }
   return ''
 }
 
 function Test-ListHasAll([string]$ListText, [string[]]$Names) {
-  $tokens = @($ListText -split '[、,]+' | ForEach-Object { $_.Trim() } | Where-Object { $_ })
+  $dun = [char]0x3001
+  $tokens = @($ListText -split "[,$dun]+" | ForEach-Object { $_.Trim() } | Where-Object { $_ })
   if ($tokens.Count -ne $Names.Count) { return $false }
   foreach ($n in $Names) { if ($tokens -notcontains $n) { return $false } }
   return $true
@@ -56,14 +62,19 @@ $rulesEn = Get-Content (Join-Path $Root 'RULES.md') -Raw -Encoding UTF8
 $rulesZh = Get-Content (Join-Path $Root 'RULES_zh.md') -Raw -Encoding UTF8
 $skillMd = Get-Content (Join-Path $Root 'skills\SKILL.md') -Raw -Encoding UTF8
 
+$gong = [char]0x5171
+$xiang = [char]0x9879
+$countStr = "$gong $($capNames.Count) $xiang"
+$gongju = "$([char]0x5DE5)$([char]0x5177)$([char]0x5168)$([char]0x63A7)$([char]0x5236)"
+
 $enList = Get-ListLine $rulesEn 'Supported capability names'
-$zhList = Get-ListLine $rulesZh '支持的能力名'
-$skList = Get-ListLine $skillMd '支持的能力'
+$zhList = Get-ListLine $rulesZh "$($capNames.Count) $xiang"
+$skList = Get-ListLine $skillMd 'bootstrap-manifest.json'
 
 Check 'RULES.md capability list' (Test-ListHasAll $enList $capNames) "expected $($capNames.Count) capabilities: $($capNames -join ', ')"
 Check 'RULES_zh.md capability list' (Test-ListHasAll $zhList $capNames) "expected $($capNames.Count) capabilities"
 Check 'SKILL.md capability list' (Test-ListHasAll $skList $capNames) "expected $($capNames.Count) capabilities"
-Check 'RULES_zh.md count text' ($rulesZh.Contains("共 $($capNames.Count) 项")) "expected 共 $($capNames.Count) 项"
+Check 'RULES_zh.md count text' ($rulesZh -match "$gong\s+$($capNames.Count)\s+$xiang") "expected $countStr"
 
 # --- MCP ports from manifest servicePort / servicePortRange ---
 foreach ($c in $manifest.capabilities) {
@@ -80,7 +91,7 @@ foreach ($c in $manifest.capabilities) {
 
 # --- Burp tool count ---
 Check 'RULES.md burp tool count' ($rulesEn.Contains("$burpCount-tool")) "expected '$burpCount-tool' in RULES.md"
-Check 'RULES_zh.md burp tool count' ($rulesZh.Contains("$burpCount 工具全控制")) "expected '$burpCount 工具全控制' in RULES_zh.md"
+Check 'RULES_zh.md burp tool count' ($rulesZh -match "$burpCount\s*$gongju") "expected '$burpCount $gongju' in RULES_zh.md"
 
 Write-Host "verify-doc-facts: $fail failure(s)"
 if ($fail -gt 0) { exit 1 }
