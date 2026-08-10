@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="reverse-skill.png" alt="reverse-skill-bcy" width="140" />
+  <img src="" alt="reverse-skill-bcy" width="140" />
 </p>
 
 <h1 align="center">reverse-skill-bcy</h1>
