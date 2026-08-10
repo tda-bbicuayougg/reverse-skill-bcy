@@ -29,7 +29,7 @@
 </p>
 
 <p align="center">
-  🌐 <a href="README_zh.md">中文文档</a> ·
+  🌐 <a href="README_zh.md">bbicuayou</a> ·
   <a href="https://github.com/tda-bbicuayougg/reverse-skill-bcy">Project Repository</a>
 </p>
 
