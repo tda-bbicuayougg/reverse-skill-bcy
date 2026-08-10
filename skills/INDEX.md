@@ -7,6 +7,7 @@
 
 | 模块 | 摘要 |
 |------|------|
+| [analysis-planner](analysis-planner/SKILL.md) | Constructs an executable Directed Acyclic Graph (DAG) analysis workflow from a target fingerprint, validating step prerequisites, cost, value, and safety bou... |
 | [api-security](api-security/SKILL.md) | Use for authorized security assessment of REST, GraphQL, WebSocket, or SOAP APIs, including discovery, authentication, authorization, rate-limit, and CI/CD t... |
 | [apk-reverse](apk-reverse/SKILL.md) | 在 CLI 环境下做 Android APK 逆向时使用。适用于 APK 解包、Java 反编译、smali 修改、重打包、Frida 动态 Hook，以及按需切换到 so/native 分析。优先使用本机已安装的 jadx、apktool、frida、adb、ida-reverse、radare2。 |
 | [attack-chain](attack-chain/SKILL.md) | Use for authorized multi-stage attack-path planning and orchestration when a task spans reconnaissance, initial access, privilege escalation, lateral movemen... |
@@ -16,7 +17,9 @@
 | [case-review](case-review/SKILL.md) | Reviews a reverse-skill case package for scope readiness, Evidence to Finding to Path traceability, work item coverage, timeline references, and optional art... |
 | [cloud-k8s](cloud-k8s/SKILL.md) | Use for authorized cloud, container, and Kubernetes security assessment including metadata SSRF, IAM misconfig, container escape paths, and cluster RBAC review. |
 | [code-audit](code-audit/SKILL.md) | Use for authorized source-code security review and SAST workflows including Semgrep, CodeQL patterns, dangerous API hunting, and fix verification. |
+| [cross-validation](cross-validation/SKILL.md) | Normalizes and cross-validates findings across multiple disassemblers, decompilers, and runtime traces. Computes empirical confidence scores and builds trace... |
 | [database-security](database-security/SKILL.md) | Use for authorized database security assessment covering PostgreSQL/MySQL/MSSQL/Mongo/Redis exposure, authz, UDF/command paths, and misconfiguration review. |
+| [deobfuscation](deobfuscation/SKILL.md) | Deobfuscates obfuscated binaries, Java JARs, and scripts using a safe pass pipeline with immutable input snapshotting, transformation logging, and automatic ... |
 | [diagram-generator](diagram-generator/SKILL.md) | generate, refine, validate, and render diagrams from natural language, notes, code snippets, schemas, tables, or existing diagram source. use for flowcharts,... |
 | [digital-forensics](digital-forensics/SKILL.md) | Use for authorized digital forensics including memory dumps, disk timelines, PCAP investigation, artifact triage, and IR evidence preservation. |
 | [docs-generator](docs-generator/SKILL.md) | Creates task-oriented technical documentation with progressive disclosure. Use when writing READMEs, API docs, architecture docs, or markdown documentation. |
@@ -30,6 +33,7 @@
 | [ida-reverse](ida-reverse/SKILL.md) | IDA Pro 逆向分析辅助技能。当用户提到逆向、反编译、分析二进制/PE/ELF/APK/DLL/SO、破解、找密码、漏洞分析、病毒分析、firmware 固件分析，或需要分析 exe/dll/so/elf/macho/sys 等文件时，务必使用此技能。 |
 | [identity-federation](identity-federation/SKILL.md) | Use for authorized assessment of federated identity systems including SAML, OIDC, OAuth2 flows, SSO misconfiguration, and token confusion issues. |
 | [js-reverse](js-reverse/SKILL.md) | 在使用 js-reverse-mcp 做前端 JavaScript 逆向时使用，适用于签名链路定位、页面观察取证、运行时采样、本地补环境复现与证据化输出。优先适配当前环境里的 js-reverse_* 工具，需要更强的浏览器/CDP/Hook 面时联动 jshookmcp。 |
+| [jvm-reverse](jvm-reverse/SKILL.md) | Analyzes Java, Kotlin, Scala, and Groovy bytecode from JAR, CLASS, WAR, EAR, and shaded archives. Orchestrates decompiler selection (CFR, Vineflower, Procyon... |
 | [llm-security](llm-security/SKILL.md) | Use for authorized security assessment of LLM applications and AI agents, including prompt injection, tool abuse, RAG exposure, memory poisoning, and model s... |
 | [macos-reverse](macos-reverse/SKILL.md) | Use for authorized macOS and Mach-O reverse engineering including codesign, Objective-C/Swift recovery, endpoint security surfaces, and Apple platform malwar... |
 | [malware-analysis](malware-analysis/SKILL.md) | Use when analyzing suspected malware through static, dynamic, and behavioral techniques, including IOC extraction, YARA or Sigma rules, sandboxing, and anti-... |
@@ -45,6 +49,7 @@
 | [dsl-vm-reverse](reverse-engineering/dsl-vm-reverse/SKILL.md) | Reverse JavaScript-based custom DSL/VM interpreters, non-standard WASM-like runtimes, and risk-control engines. Use when analyzing IIFE or switch-based opcod... |
 | [reverse-engineering](reverse-engineering/SKILL.md) | Provides reverse engineering techniques. Use when the main job is to understand how a compiled, obfuscated, packed, or virtualized target works before exploi... |
 | [supply-chain-security](supply-chain-security/SKILL.md) | Use for software supply-chain security assessment covering SBOM, SCA, CI/CD pipelines, container images, build integrity, dependency provenance, and vulnerab... |
+| [target-fingerprint](target-fingerprint/SKILL.md) | Fingerprints binary, archive, source, and runtime artifacts to extract platform, architecture, runtime, framework, obfuscation indicators, and confidence sco... |
 | [thick-client](thick-client/SKILL.md) | Use for authorized security testing of desktop thick clients including local storage, update channels, IPC, traffic, and client-side trust boundaries. |
 | [threat-hunting](threat-hunting/SKILL.md) | Use for blue-team threat hunting, detection engineering with Sigma/YARA, SIEM query design, and incident detection validation. |
 | [wifi-wireless](wifi-wireless/SKILL.md) | Use for authorized wireless security assessment including Wi-Fi capture, WPA handshake analysis, rogue AP detection research, and lab-only deauth testing. |
@@ -53,6 +58,7 @@
 ## 目录树
 
 ```
+skills/analysis-planner/SKILL.md/
 skills/api-security/SKILL.md/
 skills/apk-reverse/SKILL.md/
 skills/attack-chain/SKILL.md/
@@ -62,7 +68,9 @@ skills/browser-extension-reverse/SKILL.md/
 skills/case-review/SKILL.md/
 skills/cloud-k8s/SKILL.md/
 skills/code-audit/SKILL.md/
+skills/cross-validation/SKILL.md/
 skills/database-security/SKILL.md/
+skills/deobfuscation/SKILL.md/
 skills/diagram-generator/SKILL.md/
 skills/digital-forensics/SKILL.md/
 skills/docs-generator/SKILL.md/
@@ -76,6 +84,7 @@ skills/hardware-security/SKILL.md/
 skills/ida-reverse/SKILL.md/
 skills/identity-federation/SKILL.md/
 skills/js-reverse/SKILL.md/
+skills/jvm-reverse/SKILL.md/
 skills/llm-security/SKILL.md/
 skills/macos-reverse/SKILL.md/
 skills/malware-analysis/SKILL.md/
@@ -91,6 +100,7 @@ skills/radio-sdr/SKILL.md/
 skills/reverse-engineering/dsl-vm-reverse/SKILL.md/
 skills/reverse-engineering/SKILL.md/
 skills/supply-chain-security/SKILL.md/
+skills/target-fingerprint/SKILL.md/
 skills/thick-client/SKILL.md/
 skills/threat-hunting/SKILL.md/
 skills/wifi-wireless/SKILL.md/

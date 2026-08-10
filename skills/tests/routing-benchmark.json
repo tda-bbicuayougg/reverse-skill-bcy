@@ -845,6 +845,21 @@
                       "hint":  "cross validation decompiler consensus 交叉验证",
                       "expect":  "R45",
                       "quick":  true
+                  },
+                  {
+                      "hint":  "security assessment platform scope control plane 安全评估平台",
+                      "expect":  "R46",
+                      "quick":  true
+                  },
+                  {
+                      "hint":  "attack surface graph asset graph 攻击面图",
+                      "expect":  "R47",
+                      "quick":  true
+                  },
+                  {
+                      "hint":  "hypothesis validator vulnerability hypothesis 假说验证",
+                      "expect":  "R48",
+                      "quick":  true
                   }
               ]
 }

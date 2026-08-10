@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UnifiedFindingSchema",
+  "type": "object",
+  "required": ["finding_id", "title", "vulnerability_class", "affected_asset_id", "status", "evidence_ids", "risk"],
+  "properties": {
+    "finding_id": { "type": "string" },
+    "title": { "type": "string" },
+    "vulnerability_class": { "type": "string" },
+    "affected_asset_id": { "type": "string" },
+    "status": { "type": "string", "enum": ["CANDIDATE", "VALIDATING", "CONFIRMED", "REJECTED", "DEDUPLICATED", "PRIORITIZED", "REPORTED", "REMEDIATION", "RETEST"] },
+    "evidence_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "risk": { "$ref": "risk.schema.json" },
+    "attack_path_position": { "type": ["string", "null"] }
+  }
+}

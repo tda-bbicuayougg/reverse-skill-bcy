@@ -330,6 +330,27 @@
         { "must": "cross.?validation|decompiler.?consensus|evidence.?consensus|交叉.?验证" }
       ]
     },
+    "R46": {
+      "label": "Security assessment platform",
+      "skill": "security-assessment/SKILL.md",
+      "keywords": [
+        { "must": "security.?assessment|assessment.?platform|scope.?control.?plane|安全.?评估.?平台" }
+      ]
+    },
+    "R47": {
+      "label": "Attack surface graph",
+      "skill": "attack-surface-graph/SKILL.md",
+      "keywords": [
+        { "must": "attack.?surface.?graph|surface.?graph|asset.?graph|攻击.?面.?图" }
+      ]
+    },
+    "R48": {
+      "label": "Vulnerability hypothesis validator",
+      "skill": "hypothesis-validator/SKILL.md",
+      "keywords": [
+        { "must": "hypothesis.?validator|vulnerability.?hypothesis|disproof.?test|假说.?验证" }
+      ]
+    },
     "R0": {
       "label": "General reverse-engineering",
       "skill": "reverse-engineering/SKILL.md",
@@ -342,7 +363,7 @@
   },
   "priority": [
     "R4", "R1", "R2", "R3", "R30", "R31", "R33", "R5", "R9", "R21",
-    "R22", "R41", "R42", "R43", "R44", "R45", "R6", "R7", "R8", "R34", "R28", "R17", "R16", "R18", "R24",
+    "R22", "R41", "R42", "R43", "R44", "R45", "R46", "R47", "R48", "R6", "R7", "R8", "R34", "R28", "R17", "R16", "R18", "R24",
     "R37", "R23", "R35", "R25", "R36", "R29", "R38", "R32", "R26", "R27",
     "R10", "R11", "R12", "R13", "R14", "R15", "R19", "R40", "R20", "R39", "R0"
   ]
